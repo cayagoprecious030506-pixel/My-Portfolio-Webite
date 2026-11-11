@@ -1,0 +1,320 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Rica — Portfolio</title>
+    <meta name="description" content="Portfolio of Rica">
+    <script>
+      (function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'light');}catch(e){}})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/education.css">
+    <link rel="stylesheet" href="css/certifications.css">
+    <link rel="icon" type="image/png" href="assets/images/profile/RICA_FormalPicture.png">
+  </head>
+  <body>
+    <header class="topbar" id="topbar">
+      <div class="topbar-inner">
+        <a href="/" class="logo" aria-label="Back to top">rica.</a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/projects" class="nav-link">Projects</a>
+          <a href="/certifications" class="nav-link">Certifications</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="topbar-actions">
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle color theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+          <button type="button" class="icon-btn mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav aria-label="Mobile">
+        <a href="/" class="mobile-link">Home</a>
+        <a href="/about" class="mobile-link">About</a>
+        <a href="/projects" class="mobile-link">Projects</a>
+        <a href="/certifications" class="mobile-link">Certifications</a>
+        <a href="/contact" class="mobile-link">Contact</a>
+      </nav>
+    </div>
+
+    <section class="landing" id="hero">
+      <div class="landing-inner">
+        <div class="landing-copy">  
+          <h1 class="landing-title">
+            <span class="landing-hello">Hello, I’m</span>
+            <span class="landing-name">Rica</span>
+          </h1>
+          <p class="landing-role">A Student · Web Developer · Data Analyst</p>
+          <p class="landing-sub">
+              A passionate <strong>Computer Science</strong> student exploring the world of technology, 
+              programming, and innovation. I enjoy learning, creating, and turning ideas 
+              into meaningful digital experiences. Welcome to my portfolio!</p>
+          <div class="landing-actions">
+            <a href="/projects" class="landing-btn">View my work</a>
+            <a href="/contact" class="landing-btn ghost">Get in touch</a>
+          </div>
+          <div class="landing-socials">
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.15C0 .52.53 0 1.19 0h13.62C15.47 0 16 .52 16 1.15v13.7c0 .64-.53 1.15-1.19 1.15H1.19C.53 16 0 15.49 0 14.85V1.15ZM4.75 13.4V6.16H2.4v7.24h2.35Zm-1.17-8.22c.82 0 1.33-.54 1.33-1.22-.01-.7-.51-1.22-1.31-1.22-.8 0-1.33.53-1.33 1.22 0 .68.51 1.22 1.3 1.22h.01Zm4.53 8.22v-4.04c0-.22.02-.43.08-.59.18-.43.58-.88 1.26-.88.89 0 1.24.68 1.24 1.67v3.84h2.35V9.4c0-2.17-1.16-3.18-2.71-3.18-1.25 0-1.8.7-2.11 1.18h.02v-1H6.06c.03.66 0 7 0 7h2.05Z"/></svg></a>
+          </div>
+        </div>
+                
+        <div class="landing-portrait">
+          <div class="portrait-circle"></div>
+
+          <img
+            src="assets/images/profile/RICA_FormalPicture.png"
+            alt="Portrait of Rica"
+            class="portrait-image"
+          />
+
+          <video
+            class="portrait-video"
+            src="assets/videos/video.mp4"
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          ></video>
+
+          <p class="script portrait-note">
+            Good ideas,<br>brighter tomorrows ♡
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <main class="content-inner">
+      <section class="section" id="about">
+        <div class="about-grid">
+
+          <!-- PHOTO STACK -->
+          <div class="about-gallery" id="aboutGallery" tabindex="0" aria-roledescription="carousel" aria-label="Photos of Rica">
+            <div class="gallery-stage">
+
+              <figure class="frame" style="--tilt:-3deg;--y:-14px;--ar:4/5">
+                <span class="deco deco-tape"></span>
+                <div class="frame-img"><img src="assets/images/profile/pic2.jpg" alt="Rica, formal portrait" loading="lazy"></div>
+                <figcaption class="script">Same girl…<br>bigger dreams ♡</figcaption>
+              </figure>
+
+              <figure class="frame" style="--tilt:2.5deg;--y:22px;--ar:1/1">
+                <span class="deco deco-clip"></span>
+                <div class="frame-img"><img src="assets/images/profile/pic1.jpg" alt="Rica, casual portrait" loading="lazy"></div>
+                <figcaption class="script">Good ideas,<br>brighter tomorrows ♡</figcaption>
+              </figure>
+
+              <figure class="frame" style="--tilt:-2deg;--y:-20px;--ar:4/5"> 
+                <span class="deco deco-pin"></span>
+                <div class="frame-img"><img src="assets/images/profile/pic4.jpg" alt="Rica" loading="lazy"></div>
+                <figcaption class="script">Always learning ♡</figcaption>
+              </figure>
+
+              <figure class="frame" style="--tilt:3.5deg;--y:16px;--ar:1/1"> 
+                <span class="deco deco-bow">
+                  <svg viewBox="0 0 90 46" fill="none" stroke="#b99a63" stroke-width="3" stroke-linecap="round">
+                    <path d="M45 30C30 6 6 6 8 20c2 12 26 8 37 10Zm0 0C60 6 84 6 82 20c-2 12-26 8-37 10Z"/>
+                    <path d="M45 30 34 44M45 30l11 14"/>
+                  </svg>
+                </span>
+                <div class="frame-img"><img src="assets/images/profile/pic3.jpg" alt="Rica" loading="lazy"></div>
+                <figcaption class="script">Little moments ♡</figcaption>
+              </figure>
+
+            </div>
+          </div>
+ 
+          <div class="about-narrative">
+              <p class="eyebrow">More Than Just a Name</p>
+              <h2 class="section-title">
+                  About Me
+              </h2>
+              <p>
+                  I am currently a third-year Bachelor of Science in Computer Science student at 
+                  Cavite State University – Bacoor Campus. I am passionate about technology and interested in 
+                  creating solutions to real-world problems through computer science. Throughout my academic journey, 
+                  I have gained experience in programming, database management, web development, and software design. 
+                  My academic projects have also helped me develop my technical skills, creativity, and problem-solving abilities.
+              </p>
+
+              <p>
+                  I believe learning is a continuous process, and I am always open to exploring new technologies and taking 
+                  on challenges. My goal is to become a skilled IT professional who can create useful technology and make a 
+                  meaningful difference.
+              </p>
+
+              <p class="about-quote">
+                  “A better version of me, every day.”
+              </p>
+
+              <div class="about-traits">
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education-section" id="education">
+        <div class="education-inner">
+            <div class="section-head">
+                <p class="eyebrow">My Academic Journey</p>
+                <h2 class="section-title">Education</h2>
+            </div>
+
+            <div class="education-list">
+
+                <!-- COLLEGE -->
+                <article class="education-card">
+                    <div class="education-logo">
+                        <img src="assets/logo/cvsu-logo.jpg"
+                            alt="Cavite State University Logo">
+                    </div>
+                    <div class="education-details">
+                        <h3>Cavite State University – Bacoor Campus</h3>
+                        <p class="education-degree">
+                            Bachelor of Science in Computer Science
+                        </p>
+                        <p class="education-achievement">
+                            Currently a Third-Year Student
+                        </p>
+                    </div>
+                    <div class="education-period">
+                        2024 - Present
+                    </div>
+                </article>
+
+                <article class="education-card">
+                    <div class="education-logo">
+                        <img src="assets/logo/unida-logo.png"
+                            alt="Unida Christian Colleges Logo">
+                    </div>
+                    <div class="education-details">
+                        <h3>Unida Christian Colleges</h3>
+                        <p class="education-degree">
+                            Science, Technology, Engineering, and Mathematics (STEM) Strand
+                        </p>
+                        <p class="education-achievement">
+                            With Highest Honors
+                        </p>
+                    </div>
+                    <div class="education-period">
+                        2022 - 2024
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+      
+      <section class="section" id="projects">
+        <div class="section-head">
+          <p class="eyebrow">My work</p>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-intro">A collection of my school projects and personal works.</p>
+        </div>
+        <div class="card-grid" id="projectGrid"></div>
+      </section>
+
+      <section class="section" id="certifications">
+        <div class="section-head">
+          <p class="eyebrow">Achievements</p>
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-intro">Certificates and recognitions that reflect my learning journey.</p>
+        </div>
+
+        <div class="cert-showcase">
+
+          <!-- ropes + hanging polaroids (added by js/certifications.js) -->
+          <div class="cert-board" id="certBoard" tabindex="0" aria-label="Certifications"></div>
+
+          <!-- milestone selector -->
+          <div class="cert-controls">
+            <span class="cert-hint">Select a milestone</span>
+
+            <div class="cert-pager">
+              <button type="button" class="icon-btn" id="certPrev" aria-label="Previous certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div class="cert-dots" id="certDots"></div>
+              <button type="button" class="icon-btn" id="certNext" aria-label="Next certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+
+            <span class="cert-hint cert-hint-keys">← / → to browse</span>
+          </div>
+
+          <!-- details of the selected certificate -->
+          <div class="cert-info" id="certInfo">
+            <div>
+              <p class="cert-issuer" id="certMeta"></p>
+              <h3 class="cert-title" id="certTitle"></h3>
+              <p class="cert-desc" id="certDesc"></p>
+            </div>
+            <div class="cert-actions">
+              <a class="cert-link" id="certOpen" href="#" target="_blank" rel="noopener">Open PDF ↗</a>
+              <a class="cert-link" id="certDownload" href="#" download>Download</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="contact-grid">
+          <div>
+            <p class="eyebrow">Get in touch</p>
+            <h2 class="contact-statement">Let’s<br>Connect</h2>
+            <p class="section-intro">Have a question, opportunity, or just want to say hi? I’d love to hear from you!</p>
+            <ul class="contact-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:your-email@gmail.com">your-email@gmail.com</a></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Manila, Philippines</span></li>
+              <li><svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.15C0 .52.53 0 1.19 0h13.62C15.47 0 16 .52 16 1.15v13.7c0 .64-.53 1.15-1.19 1.15H1.19C.53 16 0 15.49 0 14.85V1.15ZM4.75 13.4V6.16H2.4v7.24h2.35Zm-1.17-8.22c.82 0 1.33-.54 1.33-1.22-.01-.7-.51-1.22-1.31-1.22-.8 0-1.33.53-1.33 1.22 0 .68.51 1.22 1.3 1.22h.01Zm4.53 8.22v-4.04c0-.22.02-.43.08-.59.18-.43.58-.88 1.26-.88.89 0 1.24.68 1.24 1.67v3.84h2.35V9.4c0-2.17-1.16-3.18-2.71-3.18-1.25 0-1.8.7-2.11 1.18h.02v-1H6.06c.03.66 0 7 0 7h2.05Z"/></svg><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">linkedin.com/in/your-profile</a></li>
+              <li><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg><a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a></li>
+            </ul>
+          </div>
+          <div class="form-wrap">
+            <h3>Send Me a Message</h3>
+            <form id="contactForm" class="contact-form">
+              <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+              <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+              <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="4" required></textarea></div>
+              <div><button type="submit" class="btn-dark">Send message</button><span class="form-status" id="formStatus" role="status" aria-live="polite"></span></div>
+            </form>
+          </div>
+        </div>
+        <p class="script contact-note">Same people.<br>Brighter conversations ♡</p>
+      </section>
+
+      <footer class="footer">
+        <em>&ldquo;Your favorite quote here.&rdquo;</em>
+        <span>&copy; <span id="currentYear"></span> Rica. All rights reserved.</span>
+      </footer>
+    </main>
+
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/certifications.js"></script>
+  </body>
+  </html>

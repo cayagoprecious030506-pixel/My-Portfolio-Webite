@@ -1,0 +1,202 @@
+/* =====================================================
+   EDUCATION SECTION
+===================================================== */
+
+.education-section {
+    position: relative;
+    padding: 65px 0 75px;
+    scroll-margin-top: 80px;
+}
+
+.education-inner {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.education-section .section-head {
+    margin-bottom: 28px;
+}
+
+.education-section .section-title {
+    font-size: clamp(32px, 4vw, 42px);
+}
+
+/* EDUCATION LIST */
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* EDUCATION CARD */
+
+.education-card {
+    display: grid;
+    grid-template-columns: 62px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+
+    padding: 23px 25px;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--muted);
+    box-shadow: var(--shadow-md);
+}
+
+/* SCHOOL LOGO */
+/* EDUCATION LOGO */
+.education-logo {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px;
+
+    background: #fffaf3;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.education-logo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 0;
+}
+
+/* EDUCATION DETAILS */
+
+.education-details {
+    min-width: 0;
+}
+
+.education-details h3 {
+    margin-bottom: 4px;
+
+    font-size: 17px;
+    font-weight: 750;
+    line-height: 1.4;
+
+    color: var(--ink);
+}
+
+.education-degree {
+    font-size: 15px;
+    color: var(--ink-secondary);
+}
+
+.education-achievement {
+    margin-top: 4px;
+
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* PERIOD */
+
+.education-period {
+    align-self: center;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+
+    white-space: nowrap;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .education-section {
+        padding: 45px 0 55px;
+    }
+
+    .education-card {
+        grid-template-columns: 52px minmax(0, 1fr);
+        gap: 15px;
+        padding: 19px;
+    }
+
+    .education-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .education-details h3 {
+        font-size: 15px;
+    }
+
+    .education-degree {
+        font-size: 13.5px;
+    }
+
+    .education-period {
+        grid-column: 2;
+        margin-top: -8px;
+        font-size: 12px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .education-section {
+        padding: 35px 0 45px;
+    }
+
+    .education-card {
+        padding: 16px;
+        gap: 12px;
+        border-radius: 12px;
+    }
+
+    .education-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .education-details h3 {
+        font-size: 14px;
+    }
+
+    .education-degree {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .education-achievement {
+        font-size: 12px;
+    }
+}

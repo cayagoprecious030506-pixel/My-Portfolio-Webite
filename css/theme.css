@@ -1,0 +1,537 @@
+/* =====================================================
+   WARM EDITORIAL THEME
+   Loads after style.css, before responsive.css
+===================================================== */
+
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+.eyebrow {
+    margin-bottom: 14px;
+
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+.script {
+    font-family: var(--font-script);
+    font-size: 22px;
+    line-height: 1.05;
+
+    color: var(--muted);
+}
+
+.section-title,
+.contact-statement {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.section-title {
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.08;
+}
+
+
+/* =====================================================
+   NAVBAR (same layout, softer hover/click)
+===================================================== */
+
+.topnav {
+    gap: 6px;
+}
+
+.nav-link {
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    background: var(--bg-secondary);
+    color: var(--ink);
+
+    transform: translateY(-1px);
+}
+
+.nav-link:active {
+    transform: scale(0.95);
+}
+
+.nav-link.active::after {
+    left: 12px;
+    bottom: -1px;
+
+    width: calc(100% - 24px);
+}
+
+.icon-btn:active {
+    transform: scale(0.92);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.landing-inner {
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.landing-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.landing-hello {
+    font-size: clamp(34px, 5vw, 60px);
+    font-weight: 500;
+}
+
+.landing-name {
+    font-size: clamp(84px, 15vw, 168px);
+    line-height: 0.9;
+}
+
+.landing-role {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.landing-sub {
+    font-size: 16px;
+}
+
+.landing-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.landing-btn {
+    padding: 12px 26px;
+    border-radius: var(--radius-pill);
+}
+
+.landing-btn.ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--ink);
+}
+
+/* CHANGED: polaroid frame with tape, kept on the RIGHT */
+.landing-portrait {
+    position: relative;
+    order: 0;
+    justify-self: end;
+
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: auto;
+    padding: 12px 12px 64px;
+
+    overflow: visible;
+
+    background: #fbf7f1;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: var(--shadow-lg);
+
+    transform: rotate(3deg);
+}
+
+/* tape on top of the frame */
+.landing-portrait::before {
+    content: '';
+
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    z-index: 2;
+
+    width: 110px;
+    height: 28px;
+
+    background: rgba(226, 213, 196, 0.85);
+
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+/* the photo inside the frame */
+.landing-portrait .portrait-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* straighten the frame slightly on hover */
+@media (hover: hover) {
+    .landing-portrait:hover {
+        transform: rotate(0deg) translateY(-8px);
+    }
+}
+
+/* hide the old circle backdrop */
+.landing-portrait .portrait-circle {
+    display: none;
+}
+
+/* handwritten caption at the bottom of the frame */
+.landing-portrait .portrait-note {
+    left: 18px;
+    right: auto;
+    bottom: 14px;
+
+    text-align: left;
+    color: #5c3522;
+}
+
+.portrait-video {
+    position: absolute;
+    inset: 12px 12px 64px 12px;
+
+    width: calc(100% - 24px);
+    height: calc(100% - 76px);
+
+    object-fit: cover;
+    object-position: top center;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    pointer-events: none;
+}
+
+.landing-portrait.is-playing .portrait-video {
+    opacity: 1;
+}
+
+@media (hover: hover) {
+    .landing-portrait:hover .portrait-video {
+        opacity: 1;
+    }
+}
+
+.portrait-note {
+    position: absolute;
+    right: 22px;
+    bottom: 20px;
+
+    text-align: right;
+    color: var(--ink);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   ABOUT (polaroid)
+===================================================== */
+
+.about-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 56px;
+}
+
+.polaroid {
+    position: relative;
+    justify-self: start;
+
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+    padding: 12px 12px 64px;
+
+    background: #fbf7f1;
+    border-radius: 4px;
+    box-shadow: var(--shadow-lg);
+
+    transform: rotate(-3deg);
+}
+
+.polaroid::before {
+    content: '';
+
+    position: absolute;
+    top: -14px;
+    left: 50%;
+
+    width: 110px;
+    height: 28px;
+
+    background: rgba(226, 213, 196, 0.85);
+
+    transform: translateX(-50%) rotate(2deg);
+}
+
+.polaroid img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+    object-position: top center;
+}
+
+.polaroid figcaption {
+    position: absolute;
+    left: 18px;
+    bottom: 14px;
+
+    color: #5c3522;
+}
+
+.about-narrative .section-title {
+    margin-bottom: 16px;
+}
+
+.about-quote {
+    margin-top: 20px;
+    padding-left: 16px;
+
+    border-left: 2px solid var(--border);
+
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 20px;
+
+    color: var(--ink-secondary);
+}
+
+.traits {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.trait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+    width: 84px;
+
+    font-size: 12px;
+    text-align: center;
+
+    color: var(--ink-secondary);
+}
+
+.trait i {
+    display: grid;
+    place-items: center;
+
+    width: 54px;
+    height: 54px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+
+.trait svg {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card {
+    border-radius: 12px;
+    border-color: var(--border-subtle);
+
+    box-shadow: var(--shadow-md);
+}
+
+.card:hover {
+    border-color: var(--ink);
+}
+
+.card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+    padding: 12px 16px 14px;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.card-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.card-ext {
+    flex-shrink: 0;
+
+    color: var(--muted);
+
+    transition: var(--transition);
+}
+
+.card-ext:hover {
+    color: var(--ink);
+
+    transform: translate(2px, -2px);
+}
+
+.card-ext svg {
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-statement {
+    font-size: clamp(48px, 8vw, 84px);
+    line-height: 1;
+}
+
+.contact-list {
+    margin-top: 24px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+    padding: 7px 0;
+
+    font-size: 14.5px;
+}
+
+.contact-list svg {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.form-wrap {
+    padding: 28px;
+
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+}
+
+.form-wrap h3 {
+    margin-bottom: 18px;
+
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+
+    color: var(--ink);
+}
+
+.field input,
+.field textarea {
+    border-radius: 8px;
+    background: var(--card-bg);
+}
+
+.contact-form .btn-dark {
+    width: 100%;
+    padding: 14px;
+
+    border-radius: var(--radius-pill);
+}
+
+.form-status {
+    display: block;
+    margin: 8px 0 0;
+}
+
+.contact-note {
+    margin-top: 28px;
+
+    text-align: right;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    font-family: var(--font-main);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 860px) {
+
+    .landing-portrait {
+        order: -1;
+        justify-self: center;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .polaroid {
+        justify-self: center;
+    }
+
+    .traits {
+        justify-content: center;
+    }
+
+}
