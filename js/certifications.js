@@ -120,23 +120,46 @@
   }
 
   /* ---- sizes + positions ---- */
+
+  // how big each position is (selected / next to it / two away / three away)
+  const scales = () =>
+    board.clientWidth < 640
+      ? { a: 1.05, n: 0.76, f: 0.62, h: 0.52 }
+      : { a: 1.18, n: 0.84, f: 0.68, h: 0.58 };
+
   function layout() {
     const W = board.clientWidth;
-    u = W < 640 ? Math.max(150, Math.min(230, W * 0.5)) : Math.max(170, Math.min(280, W * 0.25));
+    u = W < 640 ? Math.max(110, Math.min(160, W * 0.36)) : Math.max(130, Math.min(200, W * 0.17));
     board.style.setProperty('--u', u + 'px');
 
     place();
 
-    // make the stage tall enough for the tallest photo
+    // make the stage tall enough for the (much bigger) selected photo
     const tallest = Math.max(...cards.map((c) => c.offsetHeight));
-    board.style.height = Math.ceil(tallest * 1.08 + 8 + SAG + 24 + 50) + 'px';
+    board.style.height = Math.ceil(tallest * scales().a + 8 + SAG + 24 + 24) + 'px';
   }
 
   const ropeY = (f) => 8 + 4 * SAG * f * (1 - f);
 
   function place() {
     const W = board.clientWidth;
-    const step = u * 1.2;
+    const S = scales();
+    const SC = [S.a, S.n, S.f, S.h];                 // scale by distance from the selected one
+    const OVERLAP = [0, 40, 60, 60];                 // how much each one tucks behind the previous
+
+    const aw = cards[current].offsetWidth * S.a;     // width of the selected photo, as shown
+
+    // centre of the photo that sits |d| steps away, on side s (-1 left, +1 right)
+    const sideCentre = (s, ad) => {
+      let x = aw / 2;
+      let prevHalf = 0;
+      for (let k = 1; k <= Math.min(ad, 3); k++) {
+        const w = cards[(current + s * k + total) % total].offsetWidth * SC[k];
+        x += prevHalf + w / 2 - OVERLAP[k];
+        prevHalf = w / 2;
+      }
+      return s * x;
+    };
 
     cards.forEach((card, i) => {
       const p = i % 8;
@@ -151,12 +174,19 @@
       card.classList.toggle('is-far', ad === 2);
       card.classList.toggle('is-hidden', ad > 2);
 
-      const sc  = ad === 0 ? 1.06 : ad === 1 ? 0.9 : ad === 2 ? 0.78 : 0.7;
-      const ox  = ad === 0 ? 0 : Math.sign(d) * (ad > 2 ? step * 2.4 : ad * step) + JITTER[p];
-      const rot = ad === 0 ? TILT[p] * 0.25 : TILT[p];
+      const cw  = card.offsetWidth;
+      const sc  = SC[Math.min(ad, 3)];
+      const rot = ad === 0 ? TILT[p] * 0.15 : TILT[p];
+
+      // where the middle of the photo should end up
+      const centre = ad === 0 ? 0 : sideCentre(Math.sign(d), ad) + JITTER[p];
+
+      // photos scale from their clothespin, so correct for the shift
+      const pinShift = ((PIN[p] - 50) / 100) * cw;
+      const ox = centre - pinShift * (1 - sc);
 
       // follow the rope's curve at the spot where the pin is
-      const pinX = W / 2 + ox + ((PIN[p] - 50) / 100) * card.offsetWidth * sc;
+      const pinX = W / 2 + ox + pinShift;
       const f = Math.min(1, Math.max(0, pinX / W));
       const ty = Math.round(ropeY(f) + DROP[p]);
 

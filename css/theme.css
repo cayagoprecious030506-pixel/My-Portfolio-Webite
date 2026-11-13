@@ -1,6 +1,7 @@
+
 /* =====================================================
    WARM EDITORIAL THEME
-   Loads after style.css, before responsive.css
+   Loads after style.css and before responsive.css
 ===================================================== */
 
 
@@ -10,11 +11,9 @@
 
 .eyebrow {
     margin-bottom: 14px;
-
     font-size: 11px;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-
     color: var(--muted);
 }
 
@@ -22,7 +21,6 @@
     font-family: var(--font-script);
     font-size: 22px;
     line-height: 1.05;
-
     color: var(--muted);
 }
 
@@ -35,13 +33,13 @@
 }
 
 .section-title {
-    font-size: clamp(34px, 5vw, 52px);
+    font-size: clamp(30px, 4.4vw, 44px);
     line-height: 1.08;
 }
 
 
 /* =====================================================
-   NAVBAR (same layout, softer hover/click)
+   NAVBAR
 ===================================================== */
 
 .topnav {
@@ -51,14 +49,12 @@
 .nav-link {
     padding: 7px 12px;
     border-radius: var(--radius-sm);
-
     transition: var(--transition);
 }
 
 .nav-link:hover {
     background: var(--bg-secondary);
     color: var(--ink);
-
     transform: translateY(-1px);
 }
 
@@ -69,7 +65,6 @@
 .nav-link.active::after {
     left: 12px;
     bottom: -1px;
-
     width: calc(100% - 24px);
 }
 
@@ -116,7 +111,6 @@
 .landing-actions {
     display: flex;
     flex-wrap: wrap;
-
     gap: 12px;
 }
 
@@ -131,7 +125,11 @@
     border-color: var(--ink);
 }
 
-/* CHANGED: polaroid frame with tape, kept on the RIGHT */
+
+/* =====================================================
+   HERO PORTRAIT — POLAROID STYLE
+===================================================== */
+
 .landing-portrait {
     position: relative;
     order: 0;
@@ -150,9 +148,9 @@
     box-shadow: var(--shadow-lg);
 
     transform: rotate(3deg);
+    transition: transform 0.35s ease;
 }
 
-/* tape on top of the frame */
 .landing-portrait::before {
     content: '';
 
@@ -169,7 +167,6 @@
     transform: translateX(-50%) rotate(-2deg);
 }
 
-/* the photo inside the frame */
 .landing-portrait .portrait-image {
     display: block;
 
@@ -181,26 +178,28 @@
     object-position: top center;
 }
 
-/* straighten the frame slightly on hover */
 @media (hover: hover) {
     .landing-portrait:hover {
         transform: rotate(0deg) translateY(-8px);
     }
 }
 
-/* hide the old circle backdrop */
 .landing-portrait .portrait-circle {
     display: none;
 }
 
-/* handwritten caption at the bottom of the frame */
 .landing-portrait .portrait-note {
-    left: 18px;
+    left: 16px;
     right: auto;
-    bottom: 14px;
+    bottom: 10px;
+
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 1.15;
 
     text-align: left;
-    color: #5c3522;
+    background: #e9dfcd;
+    color: #4a2c1e;
 }
 
 .portrait-video {
@@ -242,12 +241,12 @@
 
 
 /* =====================================================
-   ABOUT (polaroid)
+   ABOUT — POLAROID
 ===================================================== */
 
 .about-grid {
     grid-template-columns: 0.8fr 1.2fr;
-    gap: 56px;
+    gap: 40px;
 }
 
 .polaroid {
@@ -282,6 +281,8 @@
 }
 
 .polaroid img {
+    display: block;
+
     width: 100%;
     aspect-ratio: 4 / 5;
 
@@ -366,7 +367,6 @@
 .card {
     border-radius: 12px;
     border-color: var(--border-subtle);
-
     box-shadow: var(--shadow-md);
 }
 
@@ -399,15 +399,12 @@
 
 .card-ext {
     flex-shrink: 0;
-
     color: var(--muted);
-
     transition: var(--transition);
 }
 
 .card-ext:hover {
     color: var(--ink);
-
     transform: translate(2px, -2px);
 }
 
@@ -424,81 +421,195 @@
 
 
 /* =====================================================
-   CONTACT
+   CONTACT — REFINED EDITORIAL DESIGN
 ===================================================== */
 
-.contact-statement {
-    font-size: clamp(48px, 8vw, 84px);
-    line-height: 1;
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(24px, 4vw, 48px);
+    margin-top: 0;
 }
 
+.contact-statement {
+    margin: 0;
+    font-size: clamp(44px, 6vw, 68px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.contact-info .section-intro {
+    max-width: 420px;
+    margin-top: 12px;
+}
+
+/* contact links as small cards: email + location full width, socials 2 x 2 */
 .contact-list {
-    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
 }
 
 .contact-list li {
+    position: relative;
     display: flex;
     align-items: center;
 
-    gap: 14px;
-    padding: 7px 0;
+    min-width: 0;
+    gap: 12px;
+    padding: 10px 14px;
 
+    font-size: 13.5px;
+    line-height: 1.4;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    transition: var(--transition);
+}
+
+.contact-list li:nth-child(-n + 2) {
+    grid-column: 1 / -1;
     font-size: 14.5px;
 }
 
+.contact-list li:hover {
+    border-color: var(--ink);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 .contact-list svg {
-    width: 18px;
-    height: 18px;
-
+    box-sizing: border-box;
     flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+
+    border-radius: 50%;
+    background: var(--bg-secondary);
 }
 
-.contact-list a:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+.contact-list a {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
+
+/* makes the whole card clickable */
+.contact-list a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+}
+
+
+/* CONTACT FORM */
 
 .form-wrap {
-    padding: 28px;
+    width: 100%;
+    min-width: 0;
+    padding: clamp(20px, 2.6vw, 28px);
 
     border-radius: 16px;
     box-shadow: var(--shadow-md);
 }
 
 .form-wrap h3 {
-    margin-bottom: 18px;
+    margin: 0 0 4px;
 
     font-family: var(--font-display);
     font-size: 22px;
     font-weight: 600;
+    line-height: 1.3;
     letter-spacing: 0;
     text-transform: none;
 
     color: var(--ink);
 }
 
+.form-description {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+.field {
+    min-width: 0;
+}
+
 .field input,
 .field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+
     border-radius: 8px;
     background: var(--card-bg);
 }
 
+.field textarea {
+    min-height: 110px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+}
+
 .contact-form .btn-dark {
     width: 100%;
-    padding: 14px;
-
+    padding: 13px 18px;
     border-radius: var(--radius-pill);
+    transition: var(--transition);
+}
+
+.contact-form .btn-dark:hover:not(:disabled) {
+    opacity: 0.88;
+    transform: translateY(-1px);
 }
 
 .form-status {
     display: block;
+    min-height: 0;
     margin: 8px 0 0;
+    line-height: 1.5;
 }
 
 .contact-note {
-    margin-top: 28px;
-
+    margin-top: 14px;
     text-align: right;
+}
+
+/* =====================================================
+   DESKTOP CONTACT SECTION
+===================================================== */
+
+@media (min-width: 861px) {
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        min-height: auto;
+
+        padding-top: 32px;
+        padding-bottom: 28px;
+
+        border-bottom: 0;
+    }
+
+    #contact .contact-grid {
+        width: 100%;
+    }
+
 }
 
 
@@ -508,30 +619,4 @@
 
 .footer {
     font-family: var(--font-main);
-}
-
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (max-width: 860px) {
-
-    .landing-portrait {
-        order: -1;
-        justify-self: center;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .polaroid {
-        justify-self: center;
-    }
-
-    .traits {
-        justify-content: center;
-    }
-
 }

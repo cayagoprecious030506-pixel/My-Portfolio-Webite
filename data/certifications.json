@@ -1,40 +1,50 @@
-   [
-     {
-       "title": "Oracle Certified Foundations Associate",
-       "issuer": "Oracle University",
-       "date": "November 2026",
-       "description": "Oracle Cloud Infrastructure Certified Foundations Associate, valid until November 1, 2028.",
-       "image": "assets/images/certification/cert1.jpg",
-       "pdf": "assets/images/certification/cert1.jpg"
-     },
-     {
-       "title": "Your 2nd certificate",
-       "issuer": "...",
-       "date": "...",
-       "image": "assets/images/certification/cert2.jpg"
-     },
-     {
-       "title": "Your 2nd certificate",
-       "issuer": "...",
-       "date": "...",
-       "image": "assets/images/certification/cert3.jpg"
-     },
-     {
-       "title": "Your 2nd certificate",
-       "issuer": "...",
-       "date": "...",
-       "image": "assets/images/certification/cert4.jpg"
-     },
-     {
-       "title": "Your 2nd certificate",
-       "issuer": "...",
-       "date": "...",
-       "image": "assets/images/certification/cert5.jpg"
-     },
-     {
-       "title": "Your 2nd certificate",
-       "issuer": "...",
-       "date": "...",
-       "image": "assets/images/certification/cert6.jpg"
-     }
-   ]
+[
+  {
+    "title": "Outstanding Participation, 2015 Summer Swim Meet",
+    "issuer": "Philippine Swimming League",
+    "date": "May 17, 2015",
+    "description": "Awarded for outstanding participation in the 76th PSL Leg Series, 2015 Summer Swim Meet, held at Diliman College, Quezon City.",
+    "image": "assets/images/certification/cert1.jpg",
+    "pdf": "assets/images/certification/cert1.jpg"
+  },
+  {
+    "title": "Certificate of Recognition: With Honors",
+    "issuer": "Unida Christian Colleges",
+    "date": "S.Y. 2022–2023",
+    "description": "Recognized with honors for academic performance in Grade 11 (STEM, Adam).",
+    "image": "assets/images/certification/cert2.jpg",
+    "pdf": "assets/images/certification/cert2.jpg"
+  },
+  {
+    "title": "Certificate of Recognition: With High Honors",
+    "issuer": "Unida Christian Colleges",
+    "date": "S.Y. 2023–2024",
+    "description": "Recognized with high honors for academic performance in Grade 12 (Amos).",
+    "image": "assets/images/certification/cert3.jpg",
+    "pdf": "assets/images/certification/cert3.jpg"
+  },
+  {
+    "title": "Certificate of Achievement: Vice President's Lister",
+    "issuer": "Cavite State University – Bacoor Campus",
+    "date": "2nd Semester, S.Y. 2024–2025",
+    "description": "Top 5 in class with a GWA of 1.38 for outstanding academic performance.",
+    "image": "assets/images/certification/cert4.jpg",
+    "pdf": "assets/images/certification/cert4.jpg"
+  },
+  {
+    "title": "Certificate of Achievement: Top 1, BSCS 1-2",
+    "issuer": "Cavite State University – Bacoor Campus",
+    "date": "S.Y. 2024–2025",
+    "description": "Top 1 in BSCS 1-2 with a GWA of 1.30 for outstanding academic performance in the whole first year.",
+    "image": "assets/images/certification/cert5.jpg",
+    "pdf": "assets/images/certification/cert5.jpg"
+  },
+  {
+    "title": "4th Techcellence Awards: Vice President's Lister",
+    "issuer": "Cavite State University – Bacoor City Campus",
+    "date": "October 28, 2026",
+    "description": "Certificate of Recognition from the Department of Computer Studies for academic excellence in the 2nd Semester of A.Y. 2025–2026, with a General Point Average of 1.51, attaining Honors.",
+    "image": "assets/images/certification/cert6.jpg",
+    "pdf": "assets/images/certification/cert6.jpg"
+  }
+]

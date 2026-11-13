@@ -1,4 +1,55 @@
 [
-  {"title":"Project name","category":"Academic Project","year":"2026","image":"assets/images/projects/project-1.png",
-   "summary":"One or two sentences about what the project does.","tags":["HTML","CSS","JavaScript"],"url":"https://github.com/your-username/your-repo"}
+    {
+    "title": "Puzzle Together",
+    "category": "Personal Project",
+
+    "status": "Completed",
+    "images": [
+      "assets/images/projects/puzzle_together.jpg",
+      "assets/images/projects/puzzle_together(1).jpg",
+      "assets/images/projects/puzzle_together(2).jpg",
+      "assets/images/projects/puzzle_together(3).jpg",
+      "assets/images/projects/puzzle_together(4).jpg"
+    ],
+    "summary": "A multiplayer puzzle game developed using React, Tailwind CSS, and Supabase. The game allows players to collaborate in real-time to solve puzzles together. It features a user-friendly interface, real-time updates, and a scoring system to enhance the gaming experience.",
+    "tags": ["React", "Tailwind CSS", "JavaScript", "Supabase"],
+    "githubUrl": "https://github.com/gerardosison/PuzzleTogether",
+    "demo": "https://puzzle-together-ecru.vercel.app/"
+  },
+  {
+    "title": "Patient 360 View",
+    "category": "Academic Project",
+
+    "status": "Completed",
+    "images": [
+      "assets/images/projects/cvsu_healthcare.jpg",
+      "assets/images/projects/cvsu_healthcare(1).jpg"
+    ],
+    "summary": "A healthcare web application developed to provide a centralized view of patient information. It allows healthcare professionals to access patient profiles, medical records, appointment details, and other relevant health information through a user-friendly interface. The project also implements Polyglot Persistence using SQL and MongoDB to manage different types of healthcare data efficiently.",
+    "tags": ["HTML", "CSS", "JavaScript", "SQL", "MongoDB"],
+    "githubUrl": "https://github.com/FIE00/cvsu-patient-360.git"
+  },
+  {
+    "title": "KabSU Cart",
+    "category": "Academic Project",
+    "status": "Completed",
+    "images": [
+      "assets/images/projects/kabsu_cart.jpg",
+      "assets/images/projects/kabsu_cart(1).jpg"
+    ],
+    "summary": "An e-commerce web application designed to provide users with a convenient online shopping experience. It includes features such as product browsing, search and filtering, shopping cart management, and checkout functionality. The project utilizes Polyglot Persistence by integrating SQL and MongoDB to handle different data requirements, demonstrating how multiple database technologies can work together in one application.",
+    "tags": ["HTML", "CSS", "JavaScript", "SQL", "MongoDB"],
+    "githubUrl": "https://github.com/FIE00/kabsu-cart"
+  },
+  {
+    "title": "Simple POS System",
+    "category": "Academic Project",
+    "status": "Completed",
+    "images": [
+      "assets/images/projects/pos_system.jpg"
+    ],
+    "summary": "A Java-based Point of Sale (POS) application developed collaboratively using Object-Oriented Programming (OOP) concepts. The system allows users to manage products, add items to orders, calculate transactions, and generate receipts, providing a simple and organized approach to handling sales.",
+    "tags": ["Java", "OOP", "SQL"],
+    "githubUrl": "https://github.com/FIE00/Simple_POS"
+  }
 ]

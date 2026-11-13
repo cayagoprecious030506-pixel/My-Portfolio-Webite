@@ -1,0 +1,35 @@
+[
+  {
+    "category": "Frontend & Backend",
+    "items": [
+      { "name": "HTML5", "icon": "html5" },
+      { "name": "CSS3", "icon": "css3" },
+      { "name": "JavaScript", "icon": "javascript" },
+      { "name": "Tailwind CSS", "icon": "tailwindcss" },
+      { "name": "React", "icon": "react" },
+      { "name": "Node.js", "icon": "nodejs" },
+      { "name": "Express.js", "icon": "express" },
+      { "name": "Python", "icon": "python" },
+      { "name": "C++", "icon": "cplusplus" }    
+    ]
+  },
+  {
+    "category": "Database & CI/CD Management",
+    "items": [
+      { "name": "MySQL", "icon": "mysql" },
+      { "name": "MongoDB", "icon": "mongodb" },
+      { "name": "Git", "icon": "git" },
+      { "name": "GitHub", "icon": "github" }
+    ]
+  },
+  {
+    "category": "Code Editors & IDEs",
+    "items": [
+      { "name": "Visual Studio Code", "icon": "visualstudiocode" },
+      { "name": "PyCharm", "icon": "pycharm" },
+      { "name": "Android Studio", "icon": "androidstudio" },
+      { "name": "Arduino IDE", "icon": "arduino" },
+      { "name": "GitHub Codespaces" }
+    ]
+  }
+]
