@@ -891,7 +891,7 @@
 ===================================================== */
 
 .landing-portrait{
-  --vid-zoom:1;      /* higher = closer on her (try 1.5 to 2.2) */
+  --vid-zoom:1.3;      /* higher = closer on her (try 1.5 to 2.2) */
   --vid-origin-y:100%; /* 100% = anchor at the bottom of the video */
 }
 
